@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const gameSchema = mongoose.Schema(
     {
-        name: {
+        title: {
             type: String,
             required: true
         },
@@ -10,13 +10,16 @@ const gameSchema = mongoose.Schema(
             type: Number,
             required: true
         },
-        Platform: {
+        platform: {
             type: String,
             required: true
         },
         description: {
             type: String
         }
+    },
+    {
+        timestamps: true
     }
 );
 
