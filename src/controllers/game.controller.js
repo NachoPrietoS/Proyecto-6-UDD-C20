@@ -44,3 +44,13 @@ exports.deleteGameById = async (req, res) => {
         res.status(500).json({ message: 'hubo un error al eliminar el juego', error: error.message });
     }
 }
+
+exports.getGameById = async (req, res) => {
+    try {
+        const game = await Game.findById(req.params.id);
+        if (!game) return res.status(404).json({ message: 'Juego no encontrado' });
+        return res.status(200).json({ game });
+    } catch (error) {
+        res.status(500).json({ message: 'hubo un error al obtener el juego', error: error.message });
+    }
+}
