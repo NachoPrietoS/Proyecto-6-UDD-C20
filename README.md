@@ -40,7 +40,7 @@ Base users: `/users`
 - **POST /users/login** : `loginUser` — Valida credenciales y devuelve un JWT (`SECRET` requerido).
 - **GET /users/verify-user** : `verifyUser` — (Requiere `authorization` header) Devuelve datos del usuario autenticado.
 - **PUT /users/update-user** : `updateUserById` — (Requiere `authorization`) Actualiza `username`, `email` y `password` del usuario autenticado.
-- **DELETE /users/user/:id** : `deleteUserById` — (Requiere `authorization`) Elimina el usuario autenticado. (Nota: la ruta usa `user/:id` bajo `/users`).
+- **DELETE /users/:id** : `deleteUserById` — (Requiere `authorization`) Elimina el usuario autenticado. (Nota: la ruta usa `user/:id` bajo `/users`).
 - **GET /users/users** : `getUsers` — (Requiere `authorization`) Devuelve todos los usuarios.
 
 Base games: `/games`
