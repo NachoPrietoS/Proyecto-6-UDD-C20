@@ -15,6 +15,27 @@ const userSchema = mongoose.Schema(
         password: {
             type: String,
             required: true
+        },
+        cart: {
+            type: mongoose.Types.ObjectId,
+            ref: 'Cart',
+            default: []
+        },
+        country: {
+            type: String,
+            default: ''
+        },
+        address: {
+            type: String,
+            default: ''
+        },
+        zipcode: {
+            type: Number,
+            default: 0
+        },
+        phone: {
+            type: Number,
+            default: 0
         }
     },
     {
