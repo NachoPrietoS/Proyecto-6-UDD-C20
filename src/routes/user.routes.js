@@ -7,7 +7,7 @@ userRouter.post('/register', registerUser);
 userRouter.post('/login', loginUser);
 userRouter.get('/verify-user', auth, verifyUser);
 userRouter.put('/update-user', auth, updateUserById);
-userRouter.delete('/:id', auth, deleteUserById);
+userRouter.delete('/delete-account', auth, deleteUserById);
 userRouter.get('/users', auth, getUsers);
 
 module.exports = userRouter;
